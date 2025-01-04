@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blood Donation</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #f4f4f9;
+    }
+
+    .container {
+      text-align: center;
+    }
+
+    .button-container {
+      display: flex;
+      justify-content: space-around;
+      gap: 20px;
+    }
+
+    .image-button {
+      background: none;
+      border: none;
+      cursor: pointer;
+    }
+
+    .image-button img {
+      width: 150px;
+      height: 150px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .image-button img:hover {
+      transform: scale(1.1);
+      transition: transform 0.3s ease-in-out;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="button-container">
+      <!-- Button for Request for Blood -->
+      <button class="image-button" onclick="redirectToPage('request.html')">
+        <img src="donate.png" alt="Request for Blood">
+      </button>
+      
+      <!-- Button for Add New Donor -->
+      <button class="image-button" onclick="redirectToPage('donor.html')">
+        <img src="donor.png" alt="Add New Donor">
+      </button>
+      
+      <!-- Button for Update Requests -->
+      <button class="image-button" onclick="redirectToPage('update.html')">
+        <img src="update.png" alt="Update Requests">
+      </button>
+    </div>
+  </div>
+
+  <script>
+    // JavaScript function to handle redirection
+    function redirectToPage(page) {
+      window.location.href = page;
+    }
+  </script>
+</body>
+</html>

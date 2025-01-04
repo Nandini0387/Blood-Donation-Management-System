@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8d7da;
+            color: #721c24;
+            padding: 20px;
+            text-align: center;
+        }
+        h1 {
+            color: #721c24;
+        }
+        p {
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Something went wrong!</h1>
+    <p id="error-message"></p>
+    <p id="error-details"></p>
+
+    <script>
+        // Extract the error message and details from the URL parameters and display them
+        const urlParams = new URLSearchParams(window.location.search);
+        const message = urlParams.get('message');
+        const details = urlParams.get('details');
+
+        document.getElementById('error-message').innerText = message ? message : "An unknown error occurred.";
+        document.getElementById('error-details').innerText = details ? "Details: " + details : "";
+    </script>
+</body>
+</html>
